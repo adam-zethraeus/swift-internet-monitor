@@ -113,7 +113,7 @@ public struct InternetStatusReport: Hashable, Sendable {
 
 // MARK: - Monitor
 @Observable
-nonisolated public final class InternetStatusMonitor {
+nonisolated public final class InternetMonitor {
   public enum Default {
     public static let window: Int = 10
     public static let udpTargets: [String] = ["8.8.8.8", "1.1.1.1"]
@@ -336,10 +336,10 @@ nonisolated public final class InternetStatusMonitor {
 }
 
 public struct InternetStatusView: View {
-  @State var monitor: InternetStatusMonitor
+  @State var monitor: InternetMonitor
   @State var subscribe: Date?
   public init(interval: Duration = .seconds(15)) {
-    self._monitor = State(wrappedValue: InternetStatusMonitor(interval: interval))
+    self._monitor = State(wrappedValue: InternetMonitor(interval: interval))
   }
   @ViewBuilder
   var status: some View {
