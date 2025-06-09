@@ -63,4 +63,8 @@ struct InternetStatusView: View {
 }
 ```
 
+### Example
+
+Screenshot of the repo's [example `InternetStatusView`](https://github.com/adam-zethraeus/swift-internet-monitor/blob/main/Sources/InternetMonitor/InternetStatusView.swift).
+
 ![internet monitor view](https://github.com/user-attachments/assets/67f6c6a6-fe08-47fa-97eb-cae52f337404)
